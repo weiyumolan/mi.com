@@ -1899,6 +1899,14 @@ setInterval(function(){
 
 },8000)
 })
+//对搜索框获得焦点进行优化，通过事件对象的keyCode属性实现，用户按下s键，搜索框自动获得焦点
+var search=document.querySelector(".header>form>input")
+document.addEventListener('keyup',function(e){
+  if(e.keyCode===83){
+    search.focus()
+    console.log(1)
+  }
+})							
 </script>
 </body>
 </html>
